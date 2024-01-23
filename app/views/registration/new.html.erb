@@ -1,0 +1,25 @@
+<div class="row mt-5">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <h1>Signup</h1>
+        <%= form_with model: @user, url: sign_up_path do |form| %>
+          <div class="mb-3">
+            <%= form.label :email, class: "form-label" %>
+            <%= form.text_field :email, class: 'form-control', placeholder: 'Your Email', required:true %>
+          </div>
+          <div class="mb-3">
+            <%= form.label :password, class: "form-label" %>
+            <%= form.password_field :password, class: 'form-control', required:true %>
+          </div>
+          <div class="mb-3">
+            <%= form.label :password_confirmation, class: "form-label" %>
+            <%= form.password_field :password_confirmation, class: 'form-control', required:true %>
+          </div>
+          <%= form.submit "Create User", class: 'btn btn-success'%>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>
