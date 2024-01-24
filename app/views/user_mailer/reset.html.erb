@@ -1,5 +1,4 @@
-<h1>User#reset</h1>
+Hi <% params[:user].email %>
 
-<p>
-  <%= @greeting %>, find me in app/views/user_mailer/reset.html.erb
-</p>
+Click to rest your password (expire in 15 minutes):
+<%= link_to "Reset Password", password_reset_edit_url(token: @token) %>
