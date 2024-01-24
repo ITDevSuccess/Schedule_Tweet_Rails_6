@@ -1,9 +1,6 @@
 <div class="d-flex align-item-center justify-content-center">
   <h1>PAGE INDEX</h1>
   <div class="mt-5">
-    <%# if Current.user %>
-<!--      Login as : <%#= @user.email %>-->
-    <%# end %>
+  <%= button_to "Connect to Twitter", '/auth/twitter', method: :post, class: 'btn btn-info' %>
   </div>
-
 </div>
