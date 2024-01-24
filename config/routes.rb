@@ -2,8 +2,13 @@
 Rails.application.routes.draw do
   root to: "main#index"
   get "about", to: "about#index"
+
+  get "password", to: "password#edit", as: :edit_password
+  patch "password", to: "password#update"
+
   get "sign_up", to: "registration#new"
   post "sign_up", to: "registration#create"
+
   get "sign_in", to: "sessions#new"
   post "sign_in", to: "sessions#create"
 

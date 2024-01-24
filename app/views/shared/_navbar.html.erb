@@ -14,7 +14,7 @@
         </li>
       </ul>
       <% if Current.user %>
-        <%= Current.user.email %>
+        <%= link_to Current.user.email, edit_password_path, class: 'nav-link' %>
         <%= button_to "Log Out", logout_path, method: :delete, class: "btn btn-outline-danger m-2" %>
       <% else %>
         <%= button_to "Log In", sign_in_path, class: "btn btn-outline-success" %>
