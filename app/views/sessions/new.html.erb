@@ -1,0 +1,28 @@
+<div class="row mt-5">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <h1>Sign In</h1>
+        <%= form_with  url: sign_in_path do |form| %>
+          <%# if @user.errors.any? %>
+<!--            <div class="alert alert-danger">-->
+              <%# @user.errors.full_messages.each do |messages|%>
+<!--                <div class=""><span class="code">*</span> <%#= messages %></div>-->
+              <%# end %>
+<!--            </div>-->
+          <%# end %>
+          <div class="mb-3">
+            <%= form.label :email, class: "form-label" %>
+            <%= form.text_field :email, class: 'form-control', placeholder: 'Your Email', required:true %>
+          </div>
+          <div class="mb-3">
+            <%= form.label :password, class: "form-label" %>
+            <%= form.password_field :password, class: 'form-control', required:true %>
+          </div>
+          <%= form.submit "Sign In", class: 'btn btn-success'%>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>
