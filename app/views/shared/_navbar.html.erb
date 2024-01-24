@@ -13,7 +13,12 @@
           <%= link_to "About", about_path, class: "nav-link" %>
         </li>
       </ul>
-        <%= button_to "Logout", logout_path, method: :delete, class:"btn btn-outline-success" %>
+      <% if Current.user %>
+        <%= Current.user.email %>
+        <%= button_to "Log Out", logout_path, method: :delete, class: "btn btn-outline-danger m-2" %>
+      <% else %>
+        <%= button_to "Log In", sign_in_path, class: "btn btn-outline-success" %>
+      <% end %>
     </div>
   </div>
 </nav>
